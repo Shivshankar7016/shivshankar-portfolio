@@ -149,6 +149,70 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   }, 2000)
 })
 
+// Project filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    // Initialize projects with animation
+    projectItems.forEach((item, index) => {
+        item.style.transition = 'all 0.3s ease';
+        item.style.transitionDelay = `${index * 0.1}s`;
+    });
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const targetCategory = this.getAttribute('data-filter');
+            
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Filter projects with smooth animation
+            projectItems.forEach((item, index) => {
+                const itemCategory = item.getAttribute('data-category');
+                
+                if (targetCategory === 'all' || itemCategory === targetCategory) {
+                    // Show item
+                    item.classList.remove('hidden');
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 50);
+                } else {
+                    // Hide item
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.classList.add('hidden');
+                    }, 300);
+                }
+            });
+        });
+    });
+});
+
+// Add smooth hover effects for project cards
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            if (this.querySelector('.project-image')) {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            if (this.querySelector('.project-image')) {
+                this.style.transform = 'translateY(0) scale(1)';
+            }
+        });
+    });
+});
+
 // Typing effect for hero title
 function typeWriter(element, text, speed = 100) {
   let i = 0
@@ -220,12 +284,6 @@ document.querySelectorAll(".skill-item").forEach((item) => {
   item.addEventListener("mouseleave", function () {
     this.style.transform = "translateX(0) scale(1)"
   })
-})
-
-// Project cards stagger animation
-const projectCards = document.querySelectorAll(".project-card")
-projectCards.forEach((card, index) => {
-  card.style.animationDelay = `${index * 0.2}s`
 })
 
 // Add ripple effect to buttons

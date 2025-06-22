@@ -13,7 +13,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">Shivshankar</span>
+                <span class="logo-text">Portfolio</span>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
@@ -56,12 +56,15 @@
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
                         <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        <a href="https://drive.google.com/uc?export=download&id=1J_tiAlUtPJMYEhBG1zw1xf4l_jdAHfAZ" class="btn btn-secondary" target="_blank">
+        Download My Resume
+    </a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="profile-card">
                         <div class="profile-img">
-                            <i class="fas fa-user-tie"></i>
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/myphoto.jpg-uXkpQnMrj8m4cHQlEU8HMkrgmSMz9v.jpeg" alt="Shivshankar Gupta" class="profile-photo">
                         </div>
                         <div class="floating-icons">
                             <div class="icon-item" style="--delay: 0s">
@@ -250,11 +253,133 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="container">
+        <div class="container-fluid">
             <div class="section-header">
                 <h2 class="section-title">Projects & Experience</h2>
                 <p class="section-subtitle">Showcasing my development work and integrations</p>
             </div>
+            
+            <div class="projects-layout">
+                <!-- Projects Sidebar -->
+                <div class="projects-sidebar">
+                    <h2 class="projects-title">Projects</h2>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="dotnet">.Net</button>
+                        <button class="filter-btn" data-filter="php">PHP</button>
+                        <button class="filter-btn" data-filter="reactnative">React Native</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- FoodChow.com Project -->
+                    <div class="project-item" data-category="dotnet">
+                        <div class="project-card">
+                            <img src="photos/foodchow-dotnet.png" alt="FoodChow.com - Food Delivery Platform" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h4>FoodChow.com</h4>
+                                    <p>Live Food Delivery Platform</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">.NET Core</span>
+                                        <span class="tech-tag">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TalentHub Project -->
+                    <div class="project-item" data-category="dotnet">
+                        <div class="project-card">
+                            <img src="photos/talenthub-dotnet.png" alt="TalentHub - Talent Acquisition System" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h4>TalentHub</h4>
+                                    <p>Talent Acquisition System</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">.NET Core MVC</span>
+                                        <span class="tech-tag">Kendo UI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KharidLoBechDo Project -->
+                    <div class="project-item" data-category="dotnet">
+                        <div class="project-card">
+                            <img src="photos/kharidlobechdo-dotnet.png" alt="KharidLoBechDo - E-commerce Platform" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h4>KharidLoBechDo</h4>
+                                    <p>E-commerce Platform</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">.NET Framework</span>
+                                        <span class="tech-tag">Razorpay</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E-Shop Project -->
+                    <div class="project-item" data-category="php">
+                        <div class="project-card">
+                            <img src="photos/eshop-php.png" alt="E-Shop - PHP E-commerce Website" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h4>E-Shop</h4>
+                                    <p>PHP E-commerce Website</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">PHP</span>
+                                        <span class="tech-tag">CodeIgniter</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book My Doctor App -->
+                    <div class="project-item" data-category="reactnative">
+                        <div class="project-card">
+                            <img src="photos/book-my-doctor-reactnative.png" alt="Book My Doctor App - Healthcare Management" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h4>Book My Doctor App</h4>
+                                    <p>Healthcare Management System</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">React Native</span>
+                                        <span class="tech-tag">Firebase</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Project Placeholder -->
+                    <!-- <div class="project-item" data-category="dotnet">
+                        <div class="project-card">
+                            <img src="/placeholder.svg?height=300&width=400" alt="Additional Project" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h4>Additional Project</h4>
+                                    <p>Web Application</p>
+                                    <div class="tech-tags">
+                                        <span class="tech-tag">.NET</span>
+                                        <span class="tech-tag">SQL Server</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Project Information -->
+        <div class="container mt-5">
             <div class="projects-content">
                 <div class="project-card featured">
                     <div class="project-header">
@@ -443,15 +568,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-text">
-                    <p>&copy; 2024 Shivshankar Gupta. All rights reserved.</p>
+                    <p>&copy; 2025 Shivshankar Gupta. All rights reserved.</p>
                 </div>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/shivshankar-gupta-87680b238/" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <!-- <a href="#" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a> -->
                     <a href="mailto:shivshankarg.sg1964@gmail.com" class="social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
